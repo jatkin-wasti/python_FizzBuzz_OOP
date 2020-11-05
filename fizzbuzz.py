@@ -9,5 +9,5 @@ class FizzBuzz:
             return num
 
 
-test = FizzBuzz()
-print(test.fizzbuzz_checker(30))
+# test = FizzBuzz()
+# print(test.fizzbuzz_checker(30))
