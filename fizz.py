@@ -1,7 +1,7 @@
 from fizzbuzz import FizzBuzz
 
 
-class Fizz:
+class Fizz(FizzBuzz):
     def __init__(self):
         super().__init__()
         self.fizz = 3
