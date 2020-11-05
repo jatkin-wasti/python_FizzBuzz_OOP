@@ -9,6 +9,10 @@
 - Allow for users to input which numbers to substitute for "Fizz" and "Buzz"
 ## Solution
 ### FizzBuzz class
+- This class is the parent class which defaults the fizz and buzz values to 3 and 5 respectively
+- It has a fizzbuzz_checker method that takes a number and checks if it meets the FizzBuzz conditions 
+(i.e. is it a multiple of both of them)
+- Depending on the result, it either returns the "FizzBuzz" string or the passed number
 ```
 class FizzBuzz:
     def __init__(self):
@@ -22,6 +26,10 @@ class FizzBuzz:
             return num
 ```
 ### Fizz class
+- This class is the child class to the FizzBuzz class
+- It inherits all functionality from the FizzBuzz class but also defines the Fizz number
+- It has a fizz_checker method that checks if the passed number is a multiple of the Fizz number
+- Depending on the result it either returns the "Fizz" string or the passed number 
 ```
 from fizzbuzz import FizzBuzz  # Importing the FizzBuzz class so that we can inherit from it
 
@@ -38,6 +46,15 @@ class Fizz(FizzBuzz):
             return num  # If not we return the number
 ```
 ### Buzz class
+- This class is the child class to the Fizz class
+- It inherits all functionality from the Fizz class (including functionality from the FizzBuzz class) but also defines 
+the Buzz number
+- It has a buzz_checker method that checks if the passed number is a multiple of the Buzz number
+- Depending on the result it either returns the "Buzz" string or the passed number
+- It also has the fizzbuzz_loop method which loops through numbers from 1 to the provided value
+- For each number it uses the inherited fizzbuzz_checker and fizz_checker methods along with its own buzz_checker
+ to determine if it meets any of the criteria
+- If it meets any of the criteria, it prints the relevant string. If not, it prints the number                                                                                                              
 ```
 from fizz import Fizz  # Importing the Fizz class so that we can inherit from it
 
