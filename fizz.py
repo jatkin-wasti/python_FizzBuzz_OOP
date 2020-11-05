@@ -2,9 +2,9 @@ from fizzbuzz import FizzBuzz  # Importing the FizzBuzz class so that we can inh
 
 
 class Fizz(FizzBuzz):
-    def __init__(self):
+    def __init__(self, fizznum):
         super().__init__()  # Calling the super classes initialisation method
-        self.fizz = 3  # And assigning our fizz value
+        self.fizz = fizznum  # And assigning our fizz value
 
     def fizz_checker(self, num):  # Checking if the number is a multiple of 3
         if num % self.fizz == 0:
@@ -13,5 +13,5 @@ class Fizz(FizzBuzz):
             return num  # If not we return the number
 
 
-# test = Fizz()
+# test = Fizz(3)
 # print(test.fizz_checker(15))

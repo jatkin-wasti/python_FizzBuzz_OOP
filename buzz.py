@@ -2,9 +2,10 @@ from fizz import Fizz  # Importing the Fizz class so that we can inherit from it
 
 
 class Buzz(Fizz):
-    def __init__(self):
-        super().__init__()  # Calling the initialisation method from the Fizz class
-        self.buzz = 5  # Assigning our Buzz value
+    def __init__(self, buzznum, fizznum):
+        super().__init__(fizznum)  # Calling the initialisation method from the Fizz class
+        self.buzz = buzznum  # Assigning our Buzz value
+        self.fizzbuzz = [fizznum, buzznum]
 
     def buzz_checker(self, num):  # Checking if the number is a multiple of 5
         if num % self.buzz == 0:
@@ -24,5 +25,5 @@ class Buzz(Fizz):
                 print(_)
 
 
-test = Buzz()  # Creating an instance of the Buzz class
+test = Buzz(10, 4)  # Creating an instance of the Buzz class
 test.fizzbuzz_loop(100)  # Calling the fizzbuzz_loop function
